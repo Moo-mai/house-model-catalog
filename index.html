@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แคตตาล็อกแบบบ้าน - Professional Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>📞 Tel: 02-123-4567</span>
+                <span>✉️ Email: info@housecatalog.com</span>
+            </div>
+            <div>เปิดทำการ: จันทร์-ศุกร์ 9:00-18:00</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1>🏠 House Design Catalog</h1>
+                    <p>ผู้เชี่ยวชาญออกแบบและก่อสร้างบ้านคุณภาพ</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-contact">ติดต่อเรา</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filter-section">
+            <h3>ประเภทบ้าน</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">แสดงทั้งหมด</button>
+                <button class="filter-btn" data-filter="บ้านเดี่ยว">บ้านเดี่ยว</button>
+                <button class="filter-btn" data-filter="ทาวน์โฮม">ทาวน์โฮม</button>
+            </div>
+        </div>
+
+        <div class="houses-grid" id="housesGrid"></div>
+
+        <div class="calculator-section">
+            <h2>💰 คำนวณราคาประมาณการ</h2>
+            <div class="calc-form">
+                <div class="form-group">
+                    <label>เลือกแบบบ้าน</label>
+                    <select id="houseSelect">
+                        <option value="">-- กรุณาเลือกแบบบ้าน --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>พื้นที่ใช้สอย (ตารางเมตร)</label>
+                    <input type="number" id="areaInput" placeholder="ระบุพื้นที่ เช่น 120" min="50" max="500">
+                </div>
+                <div class="form-group">
+                    <label>จำนวนชั้น</label>
+                    <select id="floorsSelect">
+                        <option value="1">1 ชั้น</option>
+                        <option value="2">2 ชั้น</option>
+                        <option value="3">3 ชั้น</option>
+                    </select>
+                </div>
+                <button class="calculate-btn" onclick="calculatePrice()">คำนวณราคา</button>
+                <div class="result" id="result">
+                    <h3>ราคาประมาณการทั้งหมด</h3>
+                    <div class="total-price" id="totalPrice"></div>
+                    <div class="breakdown" id="breakdown"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>เกี่ยวกับเรา</h4>
+                    <p>บริษัทออกแบบและก่อสร้างบ้านมืออาชีพ<br>มากกว่า 15 ปีของประสบการณ์</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ติดต่อเรา</h4>
+                    <p>123 ถนนสุขุมวิท กรุงเทพฯ 10110<br>โทร: 02-123-4567<br>Email: info@housecatalog.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>บริการของเรา</h4>
+                    <p>ออกแบบบ้าน<br>ก่อสร้างบ้าน<br>ปรับปรุงและต่อเติม</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 House Design Catalog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
